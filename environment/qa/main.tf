@@ -1,3 +1,4 @@
+/*
 module "vpc" {
     source = "../../modules/vpc"
     cidr_block = "11.10.0.0/16"
@@ -14,3 +15,4 @@ module "ec2" {
     instance_count = 3
     env = "qa"  
 }
+*/
