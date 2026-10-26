@@ -1,7 +1,7 @@
 module "vpc" {
     source = "../../modules/vpc"
-    cidr_block = "10.1.0.0/16"
-    subnet_cidr = "10.1.0.0/24"
+    cidr_block = "192.168.0.0/16"
+    subnet_cidr = "192.168.1.0/24"
     az = "${var.aws_region}a"
     env = "dev"
 }
@@ -11,6 +11,6 @@ module "ec2" {
     ami_id = "ami-08c46876c64a927b8"
     instance_type = "t3.micro"
     subnet_id = module.vpc.subnet_id 
-    instance_count = 1
+    instance_count = 2
     env = "dev"  
 }
